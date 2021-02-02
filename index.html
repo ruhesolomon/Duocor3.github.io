@@ -57,12 +57,11 @@ p{color: white}
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
     <div class="w3-half">
-      <img src="https://eecsnews.engin.umich.edu/wp-content/uploads/sites/2/2018/05/nsbe-2016-header-content.jpg" style="width:100%" onclick="onClick(this)" alt="Pic 1">
-      <img src="https://eecsnews.engin.umich.edu/wp-content/uploads/sites/2/2018/05/nsbe-conference-group-content.jpg" style="width:100%" onclick="onClick(this)" alt="Pic 3">
+      <img src="pictures/group photo.jpeg" style="width:87.5%;margin-right:-6px;" onclick="onClick(this)" alt="Picture of us at the National Convention">
+      <img src="pictures/party.jpeg" style="width:87.5%;margin-right:-6px;" onclick="onClick(this)" alt="Picture of us during our end-of-year party">
     </div>
 	<div class="w3-half">
-		  <img src="https://sites.tufts.edu/nsbe/files/2019/08/group-photo-cropped.jpg" style="width:100%" onclick="onClick(this)" alt="Pic 2">
-	      <img src="https://www1.villanova.edu/content/villanova/engineering/newsevents/newsarchives/2019/studentsAlumni/nsbe/_jcr_content/pagecontent/textimage/image.img.jpg/1556723348282.jpg" style="width:100%" onclick="onClick(this)" alt="Pic 2">
+	      <img src="pictures/vex event.jpeg" style="width:100%;margin-left:-50px;" onclick="onClick(this)" alt="Picture of the 2019 VEX Competition">
 	</div>
   </div>
 
@@ -71,7 +70,7 @@ p{color: white}
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
-      <p id="caption"></p>
+      <p id="caption" style="margin-bottom:-30px"></p>
     </div>
   </div>
 
@@ -104,8 +103,8 @@ p{color: white}
     <h1 class="w3-xxxlarge text"><b>Ten80.</b></h1>
     <hr style="width:50px;border:5px solid #ffcc00" class="w3-round">
 	<p><b>Program an autonomous racecar to get the fastest time.</b></p>
-    <p>In Ten80, we assemble and program an autonomous racecar using Arduino, in C. The car comes with various sensors you can use to navigate the track, and the goal is to 
-	beat all the other cars and get the fastest time.
+    <p>In Ten80, we assemble and program an autonomous racecar using an Arduino, in C. The car comes with various sensors you can use to navigate the track and detect obstacles. At the national 
+	competition, each racecar will complete a predetermined amount of laps as fast as they can. We have multiple cars to practice assembly and programming, as well as to run live tests on before the event.
     </p>
   </div>
   
@@ -119,7 +118,7 @@ p{color: white}
 	 in both Regional and National TMAL competitions. During club meetings, we run mock competitions to practice. Last year, we won first place regionally and fourth place nationally at the events!
     </p>
   </div><br><br></br></br>
-     <p class="w3-xxlarge text center"><a href="https://www.google.com">Sign up here!</a>
+     <p class="w3-xxlarge text center"><a href="https://forms.gle/XUhiFr9bHNrRPrtG7">Sign up here!</a>
     </p>
   </div><br></br>
 <!-- End page content -->
@@ -143,6 +142,7 @@ function w3_close() {
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
+  document.getElementById("img01").style.height = "570px";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
